@@ -127,7 +127,7 @@ class AuthController {
 
         
         $auto = $this->model->agregarAuto($color, $modelo, $kilometros, $asientos, $informacion, $marca);
-        header("Location: listar");
+        header('Location: ' . BASE_URL . 'listar');
         exit();
     
     
