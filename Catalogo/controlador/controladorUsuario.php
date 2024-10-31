@@ -183,6 +183,7 @@ public function MostrarFormEdit() {
                 
                 $auto = $this->model->editarAuto($color, $modelo, $kilometros, $asientos, $informacion, $marca,$id);
                 header('Location: ' . BASE_URL . 'formularioEditar');
+            exit();
         } 
 
         public function FormularioEliminarAutos()
