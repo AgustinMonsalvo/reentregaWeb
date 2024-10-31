@@ -1,0 +1,38 @@
+<h2>Listado de Autos</h2>
+<table class="task-table">
+    <thead>
+        <tr>
+        <th>Id</th>
+            <th>Color</th>
+            <th>Modelo</th>
+            <th>Kilómetros</th>
+            <th>Asientos</th>
+            <th>Marca</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php if (!empty($autos)) : ?>
+            <?php foreach ($autos as $auto) : ?>
+                <tr>
+                <td><?= $auto->id ?></td>
+                    <td><?= $auto->color ?></td>
+                    <td><?= $auto->Modelo ?></td>
+                    <td><?= $auto->kilometros ?></td>
+                    <td><?= $auto->Asientos ?></td>
+                    <td><?= $auto->marca ?></td>
+                    <td>
+                    <li><a href="<?= BASE_URL ?>detalle/<?= $auto->id ?>">Información adicional</a></li>
+
+
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        <?php else : ?>
+            <tr>
+                <td colspan="6">No hay autos disponibles.</td>
+            </tr>
+        <?php endif; ?>
+    </tbody>
+</table>
+
